@@ -1,0 +1,97 @@
+$base-color: #ffffff;
+$auth-padding: 80px 100px;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+}
+
+.auth-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: $base-color;
+  padding: $auth-padding;
+}
+
+.auth-banner {
+  margin: auto;
+  width: 500px;
+}
+
+.auth-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -100px;
+  padding: $auth-padding;
+  background: rgba(239, 115, 115, 0.784);
+}
+
+.form-title {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: -0.04em;
+  color: #213f7d;
+}
+
+.form-desc {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #545f7d;
+}
+
+form .email-input,
+.pass-input {
+  width: 447px;
+  height: 50px;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-btn {
+  background: #39cdcc;
+  border-radius: 8px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .auth-sidebar {
+    display: none;
+    padding: 60px 20px;
+  }
+
+  .auth-form {
+    flex: 1;
+    padding: 60px 20px;
+    background: rgba(239, 115, 115, 0.784);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
