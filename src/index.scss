@@ -4,11 +4,11 @@
 
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -22,12 +22,30 @@ code {
 }
 
 .container {
-  width: 100%;
-  margin: auto 0;
-  padding: 0 10vw;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
 }
 
 .logo {
   width: 175px;
   height: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  // .container {
+  //   width: 80%;
+  //   height: 100vh;
+  //   margin: auto;
+  // }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  // .container {
+  //   width: 60%;
+  //   height: 100vh;
+  //   margin: auto;
+  // }
 }

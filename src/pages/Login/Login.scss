@@ -1,39 +1,58 @@
+/*-------------------------*/
+/*-------COLOR VARABLE ----*/
 $base-color: #ffffff;
-$auth-padding: 80px 100px;
+$primary-color: #39cdcc;
+
+$auth-padding: 80px 0px;
+$p-xs: 2rem;
+$p-sm: 4rem;
+$p-md: 8rem;
+$p-xl: 16rem;
 
 .wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  height: 700px;
+  height: 750px;
+  overflow: hidden;
 }
 
 .auth-sidebar {
   flex: 1;
+  // width: 50%;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
-  background-color: $base-color;
   padding: $auth-padding;
 }
 
 .auth-banner {
-  margin: auto;
+  margin: 80px auto;
   width: 500px;
+  height: auto;
 }
 
-.auth-form {
+.form-box {
   flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -100px;
+  align-items: center;
+}
+
+.auth-form {
+  width: 447px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: $auth-padding;
-  background: rgba(239, 115, 115, 0.784);
+  gap: 20px;
 }
 
 .form-title {
   font-family: "Avenir Next";
+  align-items: flex-start;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -59,37 +78,120 @@ form .email-input,
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
+  padding: 0 $p-xs;
+}
+
+form .link {
+  text-decoration: none;
+  color: $primary-color;
 }
 
 .form-btn {
-  background: #39cdcc;
+  background: $primary-color;
   border-radius: 8px;
+  width: 100%;
+  height: 48px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .wrapper {
+    height: 100vh;
+  }
+
   .auth-sidebar {
     display: none;
     padding: 60px 20px;
   }
 
   .auth-form {
-    flex: 1;
-    padding: 60px 20px;
-    background: rgba(239, 115, 115, 0.784);
+    width: fit-content;
+    padding: 60px 0px;
+  }
+
+  .form__logo {
+    width: 120px;
+  }
+
+  form .email-input,
+  .pass-input,
+  .form-btn {
+    width: 386px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .wrapper {
+    height: 100vh;
+  }
+
+  .auth-sidebar {
+    display: none;
+  }
+
+  .auth-form {
+    width: fit-content;
+    padding: 60px 0px;
+  }
+
+  .form__logo {
+    width: 120px;
+  }
+
+  form .email-input,
+  .pass-input,
+  .form-btn {
+    width: 386px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .auth-sidebar {
+    display: none;
+    // padding: 60px 20px;
+  }
+
+  .form__logo {
+    display: flex;
+    width: 120px;
+    height: auto;
+  }
+
+  form .email-input,
+  .pass-input,
+  .form-btn {
+    width: 386px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .auth-sidebar {
+    display: flex;
+    // padding: 60px 20px;
+  }
+
+  .auth-form {
+    width: max-content;
+    padding: 60px 0px;
+  }
+
+  .form__logo {
+    display: none;
+    width: 150px;
+    height: auto;
+  }
+
+  form .email-input,
+  .pass-input,
+  .form-btn {
+    width: 447px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
